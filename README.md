@@ -306,6 +306,12 @@ Type: `Function`
 
 A function that gets passed an object with the property `className` (`{ className: '' }`) and should return either a string (ATTENTION this will NOT be escaped. Be sure to only pass in safe values) or a (P)React element.
 
+### `onChange` (default: `undefined`)
+
+Type: `Function`
+
+A function that gets called with the current value of the input field as it's only argument. This is handy for integrations with other libraries (e.g. redux-form).
+
 ## Progressive enhancement
 
 If your autocomplete is meant to select from a small list of options (a few hundred), we strongly suggest that you render a `<select>` menu on the server, and use progressive enhancement.

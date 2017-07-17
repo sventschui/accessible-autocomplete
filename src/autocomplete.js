@@ -227,6 +227,10 @@ export default class Autocomplete extends Component {
         options: []
       })
     }
+
+    if (queryChanged && this.props.onChange) {
+      this.props.onChange(query)
+    }
   }
 
   handleInputClick (event) {
@@ -273,6 +277,10 @@ export default class Autocomplete extends Component {
       query: newQuery,
       selected: -1
     })
+
+    if (this.props.onChange) {
+      this.props.onChange(newQuery)
+    }
   }
 
   handleOptionMouseDown (event) {
