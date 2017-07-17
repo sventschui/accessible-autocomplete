@@ -300,6 +300,12 @@ Type: `Function`
 
 A function that receives two arguments, the count of available options and the return value of `tStatusSelectedOption`, and should return the text used in the accessibility hint to indicate which options are available and which is selected.
 
+#### `dropdownArrow` (default: A rectangle pointing down)
+
+Type: `Function`
+
+A function that gets passed an object with the property `className` (`{ className: '' }`) and should return either a string (ATTENTION this will NOT be escaped. Be sure to only pass in safe values) or a (P)React element.
+
 ## Progressive enhancement
 
 If your autocomplete is meant to select from a small list of options (a few hundred), we strongly suggest that you render a `<select>` menu on the server, and use progressive enhancement.
